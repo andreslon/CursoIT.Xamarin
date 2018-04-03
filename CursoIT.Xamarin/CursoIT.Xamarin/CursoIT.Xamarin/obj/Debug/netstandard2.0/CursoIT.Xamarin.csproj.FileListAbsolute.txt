@@ -1,0 +1,11 @@
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\bin\Debug\netstandard2.0\CursoIT.Xamarin.deps.json
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\bin\Debug\netstandard2.0\CursoIT.Xamarin.dll
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\bin\Debug\netstandard2.0\CursoIT.Xamarin.pdb
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.csprojResolveAssemblyReference.cache
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.csproj.CoreCompileInputs.cache
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.App.xaml.g.cs
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.MainPage.xaml.g.cs
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.AssemblyInfoInputs.cache
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.AssemblyInfo.cs
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.dll
+D:\Repos_Andreslon\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\CursoIT.Xamarin\obj\Debug\netstandard2.0\CursoIT.Xamarin.pdb
