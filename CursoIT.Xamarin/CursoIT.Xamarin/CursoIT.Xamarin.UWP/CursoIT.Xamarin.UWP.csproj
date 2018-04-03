@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{13EBE0A4-F649-4BE2-90D6-A990A92D591B}</ProjectGuid>
+    <ProjectGuid>{10B9C259-F51D-4F97-ABCC-F62682A8BC37}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CursoIT.Xamarin.UWP</RootNamespace>
@@ -153,7 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CursoIT.Xamarin\CursoIT.Xamarin.csproj">
-      <Project>{369C06BA-4ED9-4A2B-80D3-E9C36791C4B8}</Project>
+      <Project>{93377773-7676-4500-8079-E92F96D848A2}</Project>
       <Name>CursoIT.Xamarin</Name>
     </ProjectReference>
   </ItemGroup>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DC4EC48D-9D24-4D32-80B7-4E4F3254EFFA}</ProjectGuid>
+    <ProjectGuid>{6CA307A9-6941-4B8E-BF2D-0F32327B7757}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>CursoIT.Xamarin.Droid</RootNamespace>
@@ -82,7 +82,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CursoIT.Xamarin\CursoIT.Xamarin.csproj">
-      <Project>{369C06BA-4ED9-4A2B-80D3-E9C36791C4B8}</Project>
+      <Project>{93377773-7676-4500-8079-E92F96D848A2}</Project>
       <Name>CursoIT.Xamarin</Name>
     </ProjectReference>
   </ItemGroup>

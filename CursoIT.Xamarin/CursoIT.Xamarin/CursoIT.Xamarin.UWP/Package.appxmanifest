@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="b5f5cd62-507a-45ee-9434-85353ca6b1f4"
-    Publisher="CN=922e0f10-c4bc-49d6-ade3-2ec544ac3ce0"
+    Name="5bbe9266-e3c1-49e3-9105-1435293a1dc5"
+    Publisher="CN=c180f304-b9d0-4067-a989-889d7798237f"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>CursoIT.Xamarin.UWP</DisplayName>
-    <PublisherDisplayName>922e0f10-c4bc-49d6-ade3-2ec544ac3ce0</PublisherDisplayName>
+    <PublisherDisplayName>c180f304-b9d0-4067-a989-889d7798237f</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
