@@ -1,0 +1,11 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/CursoIT.Xamarin/.vs/CursoIT.Xamarin/v15
+/CursoIT.Xamarin/CursoIT.Xamarin/CursoIT.Xamarin/bin/Debug/netstandard2.0
+/CursoIT.Xamarin/CursoIT.Xamarin/CursoIT.Xamarin/obj
+/CursoIT.Xamarin/CursoIT.Xamarin/CursoIT.Xamarin.Android/bin/Debug
+/CursoIT.Xamarin/CursoIT.Xamarin/CursoIT.Xamarin.Android/obj
+/CursoIT.Xamarin/CursoIT.Xamarin/CursoIT.Xamarin.iOS/obj
+/CursoIT.Xamarin/CursoIT.Xamarin/CursoIT.Xamarin.UWP/obj
