@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Personajes" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursoIT.Xamarin.Views.CharactersPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <Image Source="goku" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" ></Image>
+
+            <Label Text="0" Grid.Column="3" Grid.Row="2" BackgroundColor="#808080" FontAttributes="Bold" FontSize="100" TextColor="Coral" />
+            
+            
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

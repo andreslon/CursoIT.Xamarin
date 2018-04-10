@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CursoIT.Xamarin
+namespace CursoIT.Xamarin.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TabbedPage1 : TabbedPage
+    public partial class OptionsPage : TabbedPage
     {
-        public TabbedPage1 ()
+        public OptionsPage ()
         {
             InitializeComponent();
         }

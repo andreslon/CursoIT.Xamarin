@@ -13,7 +13,7 @@ namespace CursoIT.Xamarin
 		{
 			InitializeComponent();
 
-			MainPage = new CursoIT.Xamarin.MainPage();
+			MainPage = new Views.OptionsPage();
 		}
 
 		protected override void OnStart ()
