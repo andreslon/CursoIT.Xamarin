@@ -1,11 +1,246 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="News"
+             Title="En cartelera"
              x:Class="CursoIT.Xamarin.Views.NewsPage">
     <ContentPage.Content>
-        <StackLayout Padding="10">
-            <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="10">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="icon" Grid.Column="0" />
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontSize="Medium" Text="Insidious 4"/>
+                            <Label FontSize="Micro" LineBreakMode="TailTruncation" Text="Chapter 4 se estrenó el 5 de enero de 2018.​ Originalmente se pensaba lanzar el 20 de octubre de 2017, pero se reemplazó por otra producción de Blumhouse titulada Feliz Día de tu Muerte.​" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
