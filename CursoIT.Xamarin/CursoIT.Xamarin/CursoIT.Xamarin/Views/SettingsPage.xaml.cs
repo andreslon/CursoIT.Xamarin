@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace CursoIT.Xamarin.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OptionsPage : TabbedPage
-    {
-        public OptionsPage ()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class SettingsPage : ContentPage
+	{
+		public SettingsPage ()
+		{
+			InitializeComponent ();
+		}
+	}
 }
