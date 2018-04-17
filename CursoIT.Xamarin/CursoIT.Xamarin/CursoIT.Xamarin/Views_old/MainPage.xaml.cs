@@ -20,14 +20,14 @@ namespace CursoIT.Xamarin.Views
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MenuItem;
+            var item = e.SelectedItem as MainPageMenuItem;
             if (item == null)
                 return;
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 
-            this.Detail = new NavigationPage(page);
+            Detail = new NavigationPage(page);
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;
