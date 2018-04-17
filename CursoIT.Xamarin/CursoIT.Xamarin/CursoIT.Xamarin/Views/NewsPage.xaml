@@ -13,6 +13,9 @@
         <Label Text="{Binding Description, Mode=TwoWay}" FontSize="Medium"></Label>
         <Entry Text="{Binding Description}" ></Entry>
 
+
+        <Button Text="Limpiar descripcion" 
+                Command="{Binding ClearCommand}"></Button>
         
         
     </StackLayout>

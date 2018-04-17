@@ -1,9 +1,11 @@
-﻿using System;
+﻿using CursoIT.Xamarin.Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace CursoIT.Xamarin.ViewModels
 {
@@ -46,6 +48,16 @@ namespace CursoIT.Xamarin.ViewModels
             }
         }
 
+
+        public ICommand ClearCommand
+        {
+            get { return new RelayCommand(Clear, null); }
+        }
+
+        private void Clear()
+        { 
+            this.Description = string.Empty;
+        }
 
 
 
