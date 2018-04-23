@@ -1,4 +1,5 @@
-﻿using CursoIT.Xamarin.Logic;
+﻿using CursoIT.Xamarin.Interfaces;
+using CursoIT.Xamarin.Logic;
 using Plugin.TextToSpeech;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace CursoIT.Xamarin.ViewModels
 {
@@ -55,9 +57,10 @@ namespace CursoIT.Xamarin.ViewModels
             get { return new RelayCommand(Clear, null); }
         }
 
-        async private void Clear()
+        private void Clear()
         {
-            await CrossTextToSpeech.Current.Speak(Description);
+            DependencyService.Get<ITextToSpeech>().Speak(this.Description);
+
             this.Description = string.Empty;
         }
 
