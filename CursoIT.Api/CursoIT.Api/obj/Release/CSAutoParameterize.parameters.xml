@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="itxamarindatabaseEntities-Web.config Connection String" description="itxamarindatabaseEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/Models.CinemasModel.csdl|res://*/Models.CinemasModel.ssdl|res://*/Models.CinemasModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:itxamarin-server.database.windows.net,1433;initial catalog=itxamarindatabase;persist security info=True;user id=andreslon;password=@itxamarin1;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Repos_Andreslon\\CursoIT\.Xamarin\\CursoIT\.Api\\CursoIT\.Api\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='itxamarindatabaseEntities']/@connectionString" />
+  </parameter>
+</parameters>
