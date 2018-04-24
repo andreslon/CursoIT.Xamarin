@@ -4,10 +4,26 @@
              Title="Cines"
              x:Class="CursoIT.Xamarin.Views.CinemasPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView Padding="10">
+            <StackLayout >
+                <Frame Padding="10" BackgroundColor="{StaticResource ColorFrame}">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Grid.Row="0" WidthRequest="80" Aspect="AspectFill" Grid.RowSpan="2" Source="http://www.arquitecturayconcreto.com/images/stories/virtuemart/product/trayectoria-puerta-del-norte-arquitectura-y-concreto7.jpg"/>
+                        <Label Grid.Column="1" Grid.Row="0" 
+                               Style="{StaticResource titleStyle}"
+                               Text="Puerta del norte"/>
+                        <Label Grid.Column="1" Grid.Row="1" FontSize="Small" LineBreakMode="MiddleTruncation" Text="El centro comercial del norte"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

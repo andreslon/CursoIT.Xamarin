@@ -15,6 +15,7 @@ namespace CursoIT.Xamarin.Views
 		public CinemasPage ()
 		{
 			InitializeComponent ();
+
 		}
 	}
 }

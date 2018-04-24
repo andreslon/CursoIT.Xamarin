@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              
              x:Class="CursoIT.Xamarin.App">
-	<Application.Resources>
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
 
-		<!-- Application resource dictionary -->
+            <OnPlatform x:Key="ColorFrame" x:TypeArguments="Color" Android="AntiqueWhite"  iOS="Bisque"></OnPlatform>
 
-	</Application.Resources>
+            <Color x:Key="colorTitle">Black</Color>
+
+            <Style x:Key="titleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource colorTitle}" ></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
