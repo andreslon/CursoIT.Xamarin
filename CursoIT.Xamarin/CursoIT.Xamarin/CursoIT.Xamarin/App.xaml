@@ -7,7 +7,7 @@
         <!-- Application resource dictionary -->
         <ResourceDictionary>
 
-            <OnPlatform x:Key="ColorFrame" x:TypeArguments="Color" Android="AntiqueWhite"  iOS="Bisque"></OnPlatform>
+            <OnPlatform x:Key="ColorFrame" x:TypeArguments="Color" Android="#f2f2f2"  iOS="#f2f2f2"></OnPlatform>
 
             <Color x:Key="colorTitle">Black</Color>
 

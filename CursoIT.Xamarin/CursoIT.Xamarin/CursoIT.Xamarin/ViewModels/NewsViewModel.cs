@@ -12,7 +12,7 @@ using Xamarin.Forms;
 
 namespace CursoIT.Xamarin.ViewModels
 {
-    class NewsViewModel : INotifyPropertyChanged
+    public class NewsViewModel : BaseViewModel
     {
         public NewsViewModel()
         {
@@ -64,17 +64,5 @@ namespace CursoIT.Xamarin.ViewModels
             this.Description = string.Empty;
         }
 
-
-
-        #region INotifyPropertyChanged Implementation
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged == null)
-                return;
-
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
     }
 }
