@@ -7,12 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Newtonsoft.Json;
+using CursoIT.Xamarin.Resources;
 
 [assembly: Xamarin.Forms.Dependency(typeof(CinemaRepository))]
 namespace CursoIT.Xamarin.Repositories
 {
     public class CinemaRepository : ICinemaRepository
     {
+        public string ApiUri { get; set; } = ApiResources.ApiUri;
+
         public IHttpClientService HttpClientService { get; set; }
         public CinemaRepository()
         {
@@ -21,7 +24,7 @@ namespace CursoIT.Xamarin.Repositories
         async public Task<List<Cinema>> GetCinemas()
         {
             var result = await HttpClientService
-                .Get("http://cursoitapi.azurewebsites.net/api/Cinemas");
+                .Get($"{ApiUri}Cinemas");
             if (result.IsSuccessStatusCode)
             {
                 string content = await result.Content.ReadAsStringAsync();

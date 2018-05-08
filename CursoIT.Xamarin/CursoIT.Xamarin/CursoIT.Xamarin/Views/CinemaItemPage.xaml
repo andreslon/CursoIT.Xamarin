@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Name}"
+             x:Class="CursoIT.Xamarin.Views.CinemaItemPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="{Binding id}"/>
+                <Label Text="{Binding Name}"/>
+                <Label Text="{Binding Description}"/>
+                <Image Source="{Binding Image}" HeightRequest="200"/>
+                <Label Text="{Binding latitude}"/>
+                <Label Text="{Binding longitude}"/>
+                <Label Text="{Binding Likes}"/>
+                <Label Text="{Binding Dislikes}" 
+                       TextColor="{Binding Dislikes,Converter={StaticResource DislikeToColorConverter}}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

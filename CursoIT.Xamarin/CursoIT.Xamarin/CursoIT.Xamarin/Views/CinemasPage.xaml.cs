@@ -17,6 +17,13 @@ namespace CursoIT.Xamarin.Views
         {
             InitializeComponent();
             BindingContext = new CinemasViewModel();
+            lstCinemas.ItemTapped += LstCinemas_ItemTapped;
         }
+
+        async private void LstCinemas_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var selectedVM = (CinemaItemViewModel)lstCinemas.SelectedItem;
+            await this.Navigation.PushAsync(new CinemaItemPage(selectedVM));
+        } 
     }
 }

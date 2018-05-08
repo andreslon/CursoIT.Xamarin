@@ -12,7 +12,7 @@ namespace CursoIT.Xamarin.ViewModels
 {
     public class CinemasViewModel : BaseViewModel
     {
-        public ObservableCollection<Cinema> Cinemas { get; set; }
+        public ObservableCollection<CinemaItemViewModel> Cinemas { get; set; }
         public ICinemaRepository CinemaRepository { get; set; }
         public CinemasViewModel()
         {
@@ -23,18 +23,26 @@ namespace CursoIT.Xamarin.ViewModels
         {
             try
             {
-                Cinemas = new ObservableCollection<Cinema>();
+                Cinemas = new ObservableCollection<CinemaItemViewModel>();
                 var list = await CinemaRepository.GetCinemas();
                 foreach (var item in list)
                 {
-                    Cinemas.Add(item);
+                    Cinemas.Add(new CinemaItemViewModel {
+                        Description= item.Description,
+                        Dislikes = item.dislikes.GetValueOrDefault(),
+                        id = item.id,
+                        Image = item.Image,
+                        latitude = item.latitude.GetValueOrDefault(),
+                        Likes = item.likes.GetValueOrDefault(),
+                        longitude = item.longitude.GetValueOrDefault(),
+                        Name = item.Name  
+                    });
                 }
             }
             catch (Exception ex)
             {
 
-            }
-
-        }
+            } 
+        } 
     }
 }

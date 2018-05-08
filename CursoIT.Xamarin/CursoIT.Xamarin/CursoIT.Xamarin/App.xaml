@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             
+             xmlns:converters="clr-namespace:CursoIT.Xamarin.Converters"  
              x:Class="CursoIT.Xamarin.App">
     <Application.Resources>
         <!-- Application resource dictionary -->
         <ResourceDictionary>
-
+            
+            <converters:DislikeToColorConverter x:Key="DislikeToColorConverter"/>
+            
+            
             <OnPlatform x:Key="ColorFrame" x:TypeArguments="Color" Android="#f2f2f2"  iOS="#f2f2f2"></OnPlatform>
-
             <Color x:Key="colorTitle">Black</Color>
-
             <Style x:Key="titleStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource colorTitle}" ></Setter>
                 <Setter Property="FontSize" Value="Medium"></Setter>
