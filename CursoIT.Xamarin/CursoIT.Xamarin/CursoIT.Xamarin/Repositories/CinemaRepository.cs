@@ -17,19 +17,29 @@ namespace CursoIT.Xamarin.Repositories
         public string ApiUri { get; set; } = ApiResources.ApiUri;
 
         public IHttpClientService HttpClientService { get; set; }
+        public INetworkService NetworkService { get; set; }
         public CinemaRepository()
         {
             HttpClientService = DependencyService.Get<IHttpClientService>();
+            NetworkService = DependencyService.Get<INetworkService>();
         }
         async public Task<List<Cinema>> GetCinemas()
         {
-            var result = await HttpClientService
-                .Get($"{ApiUri}Cinemas");
-            if (result.IsSuccessStatusCode)
+            if (await NetworkService.IsNetworkAvailable())
             {
-                string content = await result.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<List<Cinema>>(content);
+                var result = await HttpClientService
+                .Get($"{ApiUri}Cinemas");
+                if (result.IsSuccessStatusCode)
+                {
+                    string content = await result.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<Cinema>>(content);
+                }
             }
+            else
+            {
+
+            }
+
             return null;
         }
     }
