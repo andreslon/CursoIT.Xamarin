@@ -18,28 +18,41 @@ namespace CursoIT.Xamarin.Repositories
 
         public IHttpClientService HttpClientService { get; set; }
         public INetworkService NetworkService { get; set; }
+        public IFileService FileService { get; set; }
         public CinemaRepository()
         {
             HttpClientService = DependencyService.Get<IHttpClientService>();
             NetworkService = DependencyService.Get<INetworkService>();
+            FileService = DependencyService.Get<IFileService>();
         }
         async public Task<List<Cinema>> GetCinemas()
         {
-            if (await NetworkService.IsNetworkAvailable())
+            try
             {
-                var result = await HttpClientService
-                .Get($"{ApiUri}Cinemas");
-                if (result.IsSuccessStatusCode)
+                if (await NetworkService.IsNetworkAvailable())
                 {
-                    string content = await result.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<List<Cinema>>(content);
+                    var result = await HttpClientService
+                    .Get($"{ApiUri}Cinemas");
+                    if (result.IsSuccessStatusCode)
+                    {
+                        string content = await result.Content.ReadAsStringAsync();
+                        await FileService.SaveAsync("Cinemas", content);
+                        return JsonConvert.DeserializeObject<List<Cinema>>(content);
+                    }
+                }
+                else
+                {
+                    if (await FileService.ExistAsync("Cinemas"))
+                    {
+                        var fileContent = await FileService.LoadAsync<string>("Cinemas");
+                        return JsonConvert.DeserializeObject<List<Cinema>>(fileContent);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-
-            }
-
+ 
+            } 
             return null;
         }
     }

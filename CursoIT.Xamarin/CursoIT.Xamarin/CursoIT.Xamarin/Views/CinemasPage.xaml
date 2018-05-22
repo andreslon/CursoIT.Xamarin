@@ -2,24 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Cines"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="CursoIT.Xamarin.Views.CinemasPage">
     <ContentPage.Content>
-        <ListView x:Name="lstCinemas"  ItemsSource="{Binding Cinemas}" HasUnevenRows="True" Margin="10" >
+        <ListView x:Name="lstCinemas" 
+                  IsRefreshing="{Binding IsLoading}"
+                  RefreshCommand="{Binding LoadDataCommand}"
+                  IsPullToRefreshEnabled="True"
+                  CachingStrategy="RecycleElement"
+                  SeparatorVisibility="None"  ItemsSource="{Binding Cinemas}" HasUnevenRows="True" Margin="10" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame Padding="10" BackgroundColor="{StaticResource ColorFrame}">
+                        <Frame HasShadow="True" Margin="5" Padding="10" BackgroundColor="{StaticResource ColorFrame}">
                             <Grid >
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="150"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/> 
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
-                                <Image Grid.Column="0" Grid.Row="0" WidthRequest="80" Aspect="AspectFill" Grid.RowSpan="2" Source="{Binding Image}"/>
+                                <ffimageloading:CachedImage Grid.Column="0" 
+                                                            Grid.Row="0" 
+                                                            Aspect="AspectFill" Grid.RowSpan="2" Source="{Binding Image}" />
                                 <Label Grid.Column="1" Grid.Row="0" Style="{StaticResource titleStyle}" Text="{Binding Name}"/>
                                 <Label Grid.Column="1" Grid.Row="1" FontSize="Small" LineBreakMode="MiddleTruncation" Text="{Binding Description}"/>
 
@@ -27,7 +36,7 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions> 
+                                    </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
                                         <Label Text="{Binding Likes}"></Label>
                                         <Button Image="ic_thumb_up_black_24dp" Command="{Binding LikeCommand}"  />
@@ -36,8 +45,8 @@
                                         <Label Text="{Binding Dislikes}" 
                                                TextColor="{Binding Dislikes,Converter={StaticResource DislikeToColorConverter}}"></Label>
                                         <Button Image="ic_thumb_down_black_24dp" Command="{Binding DislikeCommand}" />
-                                    </StackLayout> 
-                                </Grid>  
+                                    </StackLayout>
+                                </Grid>
                             </Grid>
                         </Frame>
                     </ViewCell>
