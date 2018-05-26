@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Name}"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="CursoIT.Xamarin.Views.CinemaItemPage">
     <ContentPage.Content>
         <ScrollView>
@@ -16,6 +17,11 @@
                 <Label Text="{Binding Likes}"/>
                 <Label Text="{Binding Dislikes}" 
                        TextColor="{Binding Dislikes,Converter={StaticResource DislikeToColorConverter}}"/>
+
+                <maps:Map 
+                    WidthRequest="320" HeightRequest="200"
+                    IsShowingUser="True" MapType="Hybrid" />
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

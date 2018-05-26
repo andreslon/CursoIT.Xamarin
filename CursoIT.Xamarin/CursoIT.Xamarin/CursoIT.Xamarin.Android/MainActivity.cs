@@ -10,7 +10,7 @@ using FFImageLoading.Forms.Droid;
 
 namespace CursoIT.Xamarin.Droid
 {
-    [Activity(Label = "CursoIT.Xamarin", Icon = "@drawable/ic_launcher", Theme = "@style/MainTheme",  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "CursoIT.Xamarin", Icon = "@drawable/ic_launcher", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -20,6 +20,7 @@ namespace CursoIT.Xamarin.Droid
 
             base.OnCreate(bundle);
             CachedImageRenderer.Init(true);
+            global::Xamarin.FormsMaps.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
