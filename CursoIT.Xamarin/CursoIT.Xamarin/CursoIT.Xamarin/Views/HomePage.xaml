@@ -4,6 +4,6 @@
             xmlns:pages="clr-namespace:CursoIT.Xamarin.Views"
              x:Class="CursoIT.Xamarin.Views.HomePage" Title="Inicio">
   <!--Pages can be added as references or inline-->
-    <pages:NewsPage />
     <pages:CinemasPage />
+    <pages:NewsPage />
 </TabbedPage>

@@ -22,8 +22,7 @@ namespace CursoIT.Xamarin.ViewModels
 
         async private void LoadData()
         {
-            IsLoading = true;
-            await Task.Delay(5000);
+            IsLoading = true; 
             IsLoading = false;
         }
 

@@ -15,44 +15,31 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame HasShadow="True" Margin="5" Padding="10" BackgroundColor="{StaticResource ColorFrame}">
-                            <Grid >
+                        <Frame HasShadow="True" Margin="5" Padding="0"   BackgroundColor="{StaticResource ColorFrame}">
+                            <Grid HeightRequest="230" ColumnSpacing="0" RowSpacing="0">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
-                                <ffimageloading:CachedImage Grid.Column="0" 
-                                                            Grid.Row="0" 
-                                                            Aspect="AspectFill" Grid.RowSpan="2" Source="{Binding Image}" />
-                                <Label Grid.Column="1" Grid.Row="0" Style="{StaticResource titleStyle}" Text="{Binding Name}"/>
-                                <Label Grid.Column="1" Grid.Row="1" FontSize="Small" LineBreakMode="MiddleTruncation" Text="{Binding Description}"/>
+ 
+                                <ffimageloading:CachedImage Aspect="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2"  Source="{Binding Image}" />
 
-                                <Grid Grid.Row="2" Grid.ColumnSpan="2" IsVisible="{Binding IsLoading,Converter={StaticResource BoolToReverseConverter}}">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <StackLayout Grid.Column="0">
-                                        <Label Text="{Binding Likes}"></Label>
-                                        <Button TextColor="Red"
-                                            Image="ic_thumb_up_black_24dp" Command="{Binding LikeCommand}"  />
-                                    </StackLayout>
-                                    <StackLayout Grid.Column="1">
-                                        <Label Text="{Binding Dislikes}" 
-                                               TextColor="{Binding Dislikes,Converter={StaticResource DislikeToColorConverter}}"></Label>
-                                        <Button  Image="ic_thumb_down_black_24dp" Command="{Binding DislikeCommand}" />
-                                    </StackLayout>
+                                <Grid Grid.ColumnSpan="2"  BackgroundColor="{StaticResource colorPrimary}">
+                                    <Label Margin="3" TextColor="White" FontAttributes="Bold" Style="{StaticResource titleStyle}" Text="{Binding Name}"/>
                                 </Grid>
+
+                                <Button IsVisible="{Binding IsLoading,Converter={StaticResource BoolToReverseConverter}}" Text="{Binding Likes}"  Grid.Row="2" Grid.Column="0" Image="ic_thumb_up_black_24dp" BackgroundColor="Transparent" Command="{Binding LikeCommand}"  />
+                                <Button IsVisible="{Binding IsLoading,Converter={StaticResource BoolToReverseConverter}}" Text="{Binding Dislikes}" TextColor="{Binding Dislikes,Converter={StaticResource DislikeToColorConverter}}" Grid.Row="2" Grid.Column="1" Image="ic_thumb_down_black_24dp" BackgroundColor="Transparent" Command="{Binding DislikeCommand}"  />
+
                                 <Grid Grid.Row="2" Grid.ColumnSpan="2" IsVisible="{Binding IsLoading}">
                                     <ActivityIndicator IsRunning="{Binding IsLoading}" Color="{StaticResource colorPrimary}" />
                                 </Grid>
-
-
+                                  
                             </Grid>
                         </Frame>
                     </ViewCell>
