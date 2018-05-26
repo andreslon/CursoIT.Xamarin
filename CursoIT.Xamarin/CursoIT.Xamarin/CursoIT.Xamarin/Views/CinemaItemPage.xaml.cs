@@ -24,11 +24,11 @@ namespace CursoIT.Xamarin.Views
             {
                 Type = PinType.Place,
                 Position = position,
-                Label = selectedVM.Name
+                Label = selectedVM.Name,
             });
 
             itemMap.MoveToRegion(MapSpan.FromCenterAndRadius(position
-                , Distance.FromKilometers(3)));
+                , Distance.FromKilometers(1)));
         }
     }
 }
