@@ -51,9 +51,25 @@ namespace CursoIT.Xamarin.Repositories
             }
             catch (Exception ex)
             {
- 
-            } 
+
+            }
             return null;
         }
+
+
+        async public Task<bool> PutCinema(Cinema entity)
+        {
+            if (await NetworkService.IsNetworkAvailable())
+            {
+                var result = await HttpClientService
+                    .Put($"{ApiUri}Cinemas/{entity.id}", entity);
+                if (result.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

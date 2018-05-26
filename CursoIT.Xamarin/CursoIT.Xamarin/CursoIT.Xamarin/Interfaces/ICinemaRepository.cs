@@ -9,5 +9,6 @@ namespace CursoIT.Xamarin.Interfaces
     public interface ICinemaRepository
     {
         Task<List<Cinema>> GetCinemas();
+        Task<bool> PutCinema(Cinema entity);
     }
 }

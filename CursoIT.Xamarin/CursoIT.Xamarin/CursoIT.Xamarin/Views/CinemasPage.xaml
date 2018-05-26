@@ -32,21 +32,27 @@
                                 <Label Grid.Column="1" Grid.Row="0" Style="{StaticResource titleStyle}" Text="{Binding Name}"/>
                                 <Label Grid.Column="1" Grid.Row="1" FontSize="Small" LineBreakMode="MiddleTruncation" Text="{Binding Description}"/>
 
-                                <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                                <Grid Grid.Row="2" Grid.ColumnSpan="2" IsVisible="{Binding IsLoading,Converter={StaticResource BoolToReverseConverter}}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <StackLayout Grid.Column="0">
                                         <Label Text="{Binding Likes}"></Label>
-                                        <Button Image="ic_thumb_up_black_24dp" Command="{Binding LikeCommand}"  />
+                                        <Button TextColor="Red"
+                                            Image="ic_thumb_up_black_24dp" Command="{Binding LikeCommand}"  />
                                     </StackLayout>
                                     <StackLayout Grid.Column="1">
                                         <Label Text="{Binding Dislikes}" 
                                                TextColor="{Binding Dislikes,Converter={StaticResource DislikeToColorConverter}}"></Label>
-                                        <Button Image="ic_thumb_down_black_24dp" Command="{Binding DislikeCommand}" />
+                                        <Button  Image="ic_thumb_down_black_24dp" Command="{Binding DislikeCommand}" />
                                     </StackLayout>
                                 </Grid>
+                                <Grid Grid.Row="2" Grid.ColumnSpan="2" IsVisible="{Binding IsLoading}">
+                                    <ActivityIndicator IsRunning="{Binding IsLoading}" Color="{StaticResource colorPrimary}" />
+                                </Grid>
+
+
                             </Grid>
                         </Frame>
                     </ViewCell>

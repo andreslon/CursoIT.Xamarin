@@ -6,12 +6,14 @@
     <Application.Resources>
         <!-- Application resource dictionary -->
         <ResourceDictionary>
-            
+            <converters:BoolToReverseConverter x:Key="BoolToReverseConverter"/>
             <converters:DislikeToColorConverter x:Key="DislikeToColorConverter"/>
 
             <OnPlatform x:Key="BackgroundColor" x:TypeArguments="Color" Android="#f2f2f2"  iOS="#f2f2f2"></OnPlatform>
             <OnPlatform x:Key="ColorFrame" x:TypeArguments="Color" Android="#FFFFFF"  iOS="#FFFFFF"></OnPlatform>
             <Color x:Key="colorTitle">Black</Color>
+            <Color x:Key="colorPrimary">#2bcbba</Color> 
+
             <Style x:Key="titleStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource colorTitle}" ></Setter>
                 <Setter Property="FontSize" Value="Medium"></Setter>
