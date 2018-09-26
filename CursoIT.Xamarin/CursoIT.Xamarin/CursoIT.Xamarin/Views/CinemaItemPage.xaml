@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Name}"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="CursoIT.Xamarin.Views.CinemaItemPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Padding="0">
+                <ffimageloading:CachedImage Source="{Binding Image}" HeightRequest="150" Aspect="Fill"/>
+                <StackLayout>
+                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large"/>
+                    <Label Text="{Binding Description}" FontSize="Medium"/>
+                </StackLayout> 
+            </StackLayout>
+            
+            <maps:Map x:Name="itemMap" Grid.Row="1"
+                    WidthRequest="320" HeightRequest="200"
+                    IsShowingUser="True"  />
+
+
+        </Grid>
+        
+        
+     
+    </ContentPage.Content>
+</ContentPage>

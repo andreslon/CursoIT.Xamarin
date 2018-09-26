@@ -2,10 +2,49 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Cines"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="CursoIT.Xamarin.Views.CinemasPage">
     <ContentPage.Content>
-        <StackLayout>
-             
-        </StackLayout>
+        <ListView x:Name="lstCinemas" 
+                  IsRefreshing="{Binding IsLoading}"
+                  RefreshCommand="{Binding LoadDataCommand}"
+                  IsPullToRefreshEnabled="True"
+                  CachingStrategy="RecycleElement"
+                  SeparatorVisibility="None"  ItemsSource="{Binding Cinemas}" HasUnevenRows="True" Margin="10" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame HasShadow="True" Margin="5" Padding="0"   BackgroundColor="{StaticResource ColorFrame}">
+                            <Grid HeightRequest="230" ColumnSpacing="0" RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
+ 
+                                <ffimageloading:CachedImage Aspect="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2"  Source="{Binding Image}" />
+
+                                <Grid Grid.ColumnSpan="2"  BackgroundColor="{StaticResource colorPrimary}">
+                                    <Label Margin="3" TextColor="White" FontAttributes="Bold" Style="{StaticResource titleStyle}" Text="{Binding Name}"/>
+                                </Grid>
+
+                                <Button IsVisible="{Binding IsLoading,Converter={StaticResource BoolToReverseConverter}}" Text="{Binding Likes}"  Grid.Row="2" Grid.Column="0" Image="ic_thumb_up_black_24dp" BackgroundColor="Transparent" Command="{Binding LikeCommand}"  />
+                                <Button IsVisible="{Binding IsLoading,Converter={StaticResource BoolToReverseConverter}}" Text="{Binding Dislikes}" TextColor="{Binding Dislikes,Converter={StaticResource DislikeToColorConverter}}" Grid.Row="2" Grid.Column="1" Image="ic_thumb_down_black_24dp" BackgroundColor="Transparent" Command="{Binding DislikeCommand}"  />
+
+                                <Grid Grid.Row="2" Grid.ColumnSpan="2" IsVisible="{Binding IsLoading}">
+                                    <ActivityIndicator IsRunning="{Binding IsLoading}" Color="{StaticResource colorPrimary}" />
+                                </Grid>
+                                  
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

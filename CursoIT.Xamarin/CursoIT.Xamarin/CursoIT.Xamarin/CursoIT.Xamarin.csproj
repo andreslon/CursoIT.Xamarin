@@ -5,20 +5,51 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views_old\**" />
+    <EmbeddedResource Remove="Views_old\**" />
+    <None Remove="Views_old\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Naxam.BottomTabbedPage" Version="0.2.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.1.1" />
+    <PackageReference Include="Xam.Plugins.TextToSpeech" Version="3.3.2" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.3.6" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="2.5.0.280555" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CursoIT.Xamarin.Logic\CursoIT.Xamarin.Logic.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MainPageMenuItem.cs">
+    <Compile Update="Models\MenuItem.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\ApiResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ApiResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\ApiResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApiResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AccountPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\CategoriesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CinemaItemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CinemasPage.xaml">
@@ -30,18 +61,11 @@
     <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainPageMaster.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\NewsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SettingsPage.xaml">
+    <EmbeddedResource Update="Views\OptionsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>

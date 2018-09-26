@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<naxam:BottomTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pages="clr-namespace:CursoIT.Xamarin.Views"
-             Title="Inicio"
-             x:Class="CursoIT.Xamarin.Views.HomePage">
-    <!--Pages can be added as references or inline-->
-    <pages:NewsPage />
-    <pages:CinemasPage />
-</TabbedPage>
+             xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.BottomTabbedPage.Forms"
+             x:Class="CursoIT.Xamarin.Views.HomePage" Title="Inicio">
+  <!--Pages can be added as references or inline-->
+    <pages:CinemasPage  />
+    <pages:NewsPage  />
+</naxam:BottomTabbedPage>
